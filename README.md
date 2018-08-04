@@ -24,6 +24,7 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ## HTML Page Structure:
 
+```html
 <header></header>
 <body>
     <main>
@@ -38,6 +39,7 @@ There will be a light bulb graphic as the background of the page. When the page 
     </aside>
     <footer></footer>
 </body>
+```
 
 ## To Run
 
