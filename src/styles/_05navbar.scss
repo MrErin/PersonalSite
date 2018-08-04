@@ -12,26 +12,66 @@
  ▀        ▀▀  ▀         ▀          ▀          ▀▀▀▀▀▀▀▀▀▀   ▀         ▀  ▀         ▀ 
   */
 
-// nav {
-//     ul {
-//         list-style-type: none;
-//         margin: 0;
-//         padding: 0;
-//         overflow: hidden;
-//         background-color: $accent-background;
-//     }
-//     li {
-//         float: left;
-//         a {
-//             display: block;
-//             color: $accent-text-color;
-//             text-align: center;
-//             padding: 14px 16px;
-//             text-decoration: none;
-//         }
-//         a:hover {
-//             background-color: $contrast-background;
-//             color: $contrast-text-color;
-//         }
-//     }
-// }
+nav {
+  overflow: hidden;
+  background-color: $base-background;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  a {
+    float: left;
+    display: block;
+    color: $base-text-color;
+    text-align: center;
+    @include rem-fallback(padding, 1.4, 1.6);
+    text-decoration: none;
+    @include font-size($body-font-size+1.7);
+  }
+  a:hover {
+    background-color: $base-text-color;
+    color: $base-background;
+  }
+  .icon {
+    display: none;
+  }
+  .responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.active {
+  background-color: $accent-background;
+  color: $accent-text-color;
+}
+
+@include media("<=tablet") {
+  nav a:not(:first-child) {
+    display: none;
+  }
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+  nav.responsive {
+    position: relative;
+    .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+}
+
+.anchor {
+  display: block;
+  height: 10em;
+  margin-top: -10em;
+  visibility: hidden;
+}
