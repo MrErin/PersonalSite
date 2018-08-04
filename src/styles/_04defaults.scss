@@ -1,0 +1,149 @@
+/*
+
+▄▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌      ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░▌          
+▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄▄▄ 
+▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░░░░░░░░░░░▌
+▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░▌          ▐░▌      ▀▀▀▀▀▀▀▀▀█░▌
+▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌               ▐░▌
+▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌          ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▄▄▄▄▄▄▄▄▄█░▌
+▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░▌          ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌     ▐░░░░░░░░░░░▌
+▀▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀  ▀            ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀ 
+                                                                                                
+
+*/
+
+html {
+    // sets up the base 10 for font-size and rem-fallback mixins
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $base-background;
+    color: $base-text-color;
+    font-family: $body-font, sans-serif;
+    @include font-size($body-font-size);
+    background: black url('../assets/img/bulb0.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+* {
+    @include selection {
+        background: $base-text-color;
+        color: #fff;
+    }
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: $accent-background;
+    &:hover,
+    &:active {
+        text-decoration: underline;
+        color: $base-text-color;
+    }
+}
+
+p {
+    @include rem-fallback(margin,
+    0,
+    0,
+    0,
+    2.4);
+    @include rem-fallback(padding,
+    0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $title-font, serif;
+    font-weight: 500;
+    @include rem-fallback(margin,
+    0,
+    0,
+    1.6);
+    padding: 0;
+}
+
+h1 {
+    @include font-size($body-font-size+2);
+}
+
+h2 {
+    @include font-size($body-font-size+1.4);
+}
+
+h3 {
+    @include font-size($body-font-size+.8);
+}
+
+h4 {
+    @include font-size($body-font-size+.4);
+}
+
+h5 {
+    @include font-size($body-font-size+.2);
+}
+
+h6 {
+    @include font-size($body-font-size);
+}
+
+/* Objects */
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.test {
+    border: 5px solid $test-color;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.wrapper {
+    @include rem-fallback(margin,
+    1.5);
+    @include rem-fallback(padding,
+    1.5);
+    display: flex;
+    justify-content: center;
+}
+
+.border {
+    border: 1px solid $base-text-color;
+}
+
+article {
+    @include rem-fallback(margin,
+    1.5);
+    @include rem-fallback(padding,
+    1.5);
+}
+
+/* Background change stuff */
+
+#img0,
+#img1,
+#img2,
+#img3,
+#img4 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: -1;
+}
