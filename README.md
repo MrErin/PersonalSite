@@ -22,6 +22,22 @@ There will be a light bulb graphic as the background of the page. When the page 
 ## Completed Features:
 
 
+## HTML Page Structure:
+
+<header></header>
+<body>
+    <main>
+        <article>
+            <section> (four of these)
+            <h2></h2>
+            </section>
+        </article>
+    </main>
+    <aside>
+        [bulb images]
+    </aside>
+    <footer></footer>
+</body>
 
 ## To Run
 

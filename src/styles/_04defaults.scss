@@ -21,24 +21,41 @@ html {
 }
 
 body {
-    background-color: $base-background;
     color: $base-text-color;
     font-family: $body-font, sans-serif;
     @include font-size($body-font-size);
 }
 
+// #content {
+// }
 #bulb {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 25px;
     background-color: $base-background;
     height: 300px;
-    position: absolute;
     img {
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
         overflow: hidden;
+    }
+    @include media("<=phone") {
+        background-color: #def;
+    }
+    @include media(">phone") {
+        background-color: #abc;
+    }
+    @include media(">=815px", "<desktop") {
+        background-color: #fed;
+    }
+    @include media(">=desktop") {
+        background-color: #fab;
     }
 }
 
@@ -137,8 +154,7 @@ article {
 #img0,
 #img1,
 #img2,
-#img3,
-#img4 {
+#img3 {
     width: 100%;
     height: 100%;
     display: none;
