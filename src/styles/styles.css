@@ -224,7 +224,7 @@ Variables
 ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌          ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▄▄▄▄▄▄▄▄▄█░▌
 ▐░░░░░░░░░░▌ ▐░░░░░░░░░░░▌▐░▌          ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌     ▐░░░░░░░░░░░▌
 ▀▀▀▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀▀▀▀▀  ▀            ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀       ▀▀▀▀▀▀▀▀▀▀▀ 
-                                                                                                
+
 
 */
 html {
@@ -238,35 +238,22 @@ body {
   font-size: 1.6rem;
   line-height: 2.4rem; }
 
-#bulb {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 25px;
-  background-color: #0D0D0D;
-  height: 300px; }
-  #bulb img {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden; }
-  @media (max-width: 320px) {
-    #bulb {
-      background-color: #def; } }
-  @media (min-width: 321px) {
-    #bulb {
-      background-color: #abc; } }
+article {
+  margin: 15px;
+  margin: 1.5rem;
+  padding: 15px;
+  padding: 1.5rem; }
 
-@media (min-width: 815px) and (max-width: 1023px) {
-  #bulb {
-    background-color: #fed; } }
-  @media (min-width: 1024px) {
-    #bulb {
-      background-color: #fab; } }
+#bulb {
+  position: relative;
+  width: 100%;
+  height: 35em;
+  margin: 0 auto; }
+  #bulb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    position: fixed; }
 
 * ::-moz selection {
   background: #D6D6D6;
@@ -275,13 +262,6 @@ body {
 * ::selection {
   background: #D6D6D6;
   color: #fff; }
-
-a {
-  text-decoration: none;
-  color: #648500; }
-  a:hover, a:active {
-    text-decoration: underline;
-    color: #D6D6D6; }
 
 p {
   margin: 0px 0px 0px 24px;
@@ -337,45 +317,12 @@ h6 {
   font-size: 1.6rem;
   line-height: 2.4rem; }
 
-/* Objects */
-img {
-  height: auto;
-  max-width: 100%; }
-
-.test {
-  border: 5px solid red; }
-
 .centered {
   margin: 0 auto;
   text-align: center; }
 
-.wrapper {
-  margin: 15px;
-  margin: 1.5rem;
-  padding: 15px;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: center; }
-
 .border {
   border: 1px solid #D6D6D6; }
-
-article {
-  margin: 15px;
-  margin: 1.5rem;
-  padding: 15px;
-  padding: 1.5rem; }
-
-/* Background change stuff */
-#img0,
-#img1,
-#img2,
-#img3 {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: fixed;
-  z-index: -1; }
 
 /*
  ▄▄        ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄               ▄  ▄▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 

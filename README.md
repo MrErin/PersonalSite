@@ -8,16 +8,42 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ## Requirements:
 
-* Responsive
-* Accessibility first
+* Mobile design (applies to phone and small tablets):
+  * Elements should be stacked vertically, with the following features:
+    * These divs do not move:
+      * Hamburger menu overlaying bulb image div
+      * Bulb image div (should fade update on scroll as before)
+        * For smaller viewports, there should be a small set of images to load
+    * These divs scroll, disappearing under the image div
+      * Content div
+      * Footer
+* Large tablet/desktop design:
+  * Elements are aligned horizontally, with the image on the right
+    * These divs do not move:
+      * Navbar across the top
+      * Bulb image div on the righthand side (possibly having two different sizes in this configuration, not sure)
+        * Larger viewports should load larger images
+      * Footer div
+    * These divs scroll, disappearing under the navbar. The text should never overlay the image div.
+      * Content div
+* Keep the background of the page consistent with the background color of the image div so it looks like it's one large image.
+* Make sure the navbar or hamburger menu is a slightly lighter gray color so it's clear that it's there, but it's not distracting. Perhaps pull the purple or orange from the lightning image.
+* Add google analytics tracker before uploading
 
 ## Currently Working On:
 
+Mobile Design
 
+[x] Get two divs to stack
+[x] Don't let the bulb div overlay the content div
+[] Start the content at the bottom of the bulb div
+[] Get the bulb section to be no more than 20% of the viewport
+[] Create the nav menu
 
 ## Remaining Features:
 
 * Try to figure out how to change the mechanism from scrolling to depending on the last heading that was visible in the viewport. For example, if I have a navbar and someone goes straight to the projects heading, I'd like the bulb to go ahead and light up to that level.
+  * [Example fiddle](https://jsfiddle.net/n4pdx/636/)
 
 ## Completed Features:
 
