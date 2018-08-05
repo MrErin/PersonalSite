@@ -3,38 +3,69 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Erin Meaker: Full Stack Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Erin Meaker</title>
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
 </head>
-<header>
 
-</header>
+<span class="anchor" id="HomeA"></span>
 
 <body>
-    <span class="anchor" id="HomeA"></span>
-    <div id="Home" class="navwrap">
+    <header id="header">
+        <div id="Home" class="container">
+            <h1 id="myName">Erin Meaker</h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="#HomeA" class="active">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="#BioA">Bio</a>
+
+                    </li>
+                    <li>
+                        <a href="#ResumeA">Resume</a>
+
+                    </li>
+                    <li>
+                        <a href="#SkillsA">Skills & Technologies</a>
+
+                    </li>
+                    <li>
+                        <a href="#ContactA">Contact</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+    <!-- <div id="Home" class="navwrap">
         <nav id="topnav" class="topnav">
-            <a href="#HomeA">Home</a>
+            <a href="#HomeA" class="active">Home</a>
             <a href="#BioA">Bio</a>
             <a href="#ResumeA">Resume</a>
             <a href="#SkillsA">Skills & Technologies</a>
             <a href="#ContactA">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="navbar()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </nav>
-        <aside id="bulb">
-            <img id="img0" src="./assets/img/bulb0.png">
-            <!-- <img id="img1" src="./assets/img/bulb1.png">
+        </nav> -->
+    <aside id="bulb">
+        <img id="img0" src="./assets/img/bulb0.png">
+        <!-- <img id="img1" src="./assets/img/bulb1.png">
             <img id="img2" src="./assets/img/bulb2.png">
             <img id="img3" src="./assets/img/bulb3.png"> -->
 
-        </aside>
+    </aside>
     </div>
     <main>
-        <article>
+        <article class="content">
             <span class="anchor" id="BioA"></span>
             <section id="Bio">
                 <h2 id="BioHead">BIOGRAPHY</h2>
@@ -320,6 +351,12 @@
 
 
     <script src="./bundle.js"></script>
+    <script>
+        function navbar() {
+            const menu = document.getElementById('nav')
+            menu.classList.toggle('open')
+        }
+    </script>
 </body>
 
 </html>
