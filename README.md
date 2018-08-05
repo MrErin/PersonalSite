@@ -37,13 +37,11 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ### Content:
 
-[] Bio
-[] Resume
-[] Skills
-[] Contact Info
-[] Footer
-
-
+* [] Bio
+* [] Resume
+* [] Skills
+* [] Contact Info
+* [] Footer
 
 ## Remaining Features:
 
@@ -52,33 +50,12 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ## Completed Features:
 
-###Mobile Design:
+### Mobile Design:
 
-[x] Get two divs to stack
-[x] Don't let the bulb div overlay the content div
-[x] Start the content at the bottom of the bulb div
-[x] Build responsive menu
-
-
-
-## HTML Page Structure:
-
-```html
-<header></header>
-<body>
-    <main>
-        <article>
-            <section> (four of these)
-            <h2></h2>
-            </section>
-        </article>
-    </main>
-    <aside>
-        [bulb images]
-    </aside>
-    <footer></footer>
-</body>
-```
+* [x] Get two divs to stack
+* [x] Don't let the bulb div overlay the content div
+* [x] Start the content at the bottom of the bulb div
+* [x] Build responsive menu
 
 ## To Run
 
