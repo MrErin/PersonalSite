@@ -488,4 +488,44 @@ ul li {
   font-size: 50px;
   font-size: 5rem; }
 
+.contactIcons {
+  background-color: #33045E;
+  color: #D6D6D6;
+  padding: 10px;
+  padding: 1rem;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top: 1px solid #D6D6D6;
+  max-width: 50%; }
+  .contactIcons i {
+    display: inline;
+    font-size: 50px;
+    font-size: 5rem; }
+  .contactIcons a:not(:first-child) {
+    padding-left: 30px; }
+  .contactIcons a {
+    text-decoration: none;
+    color: #D6D6D6; }
+  @media (max-width: 768px) {
+    .contactIcons {
+      max-width: 70%; } }
+
+.finalMessage {
+  font-family: Lustria;
+  background-color: #648500;
+  color: #D6D6D6;
+  padding: 10px;
+  padding: 1rem;
+  margin-top: 10px;
+  margin-top: 1rem;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  max-width: 50%; }
+  @media (max-width: 768px) {
+    .finalMessage {
+      max-width: 70%;
+      text-align: left; } }
+
 /*# sourceMappingURL=styles.css.map */

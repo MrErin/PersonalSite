@@ -211,3 +211,43 @@ ul {
     font-family: $callout-font, serif;
     @include rem-fallback(font-size, 5);
 }
+
+.contactIcons {
+    i {
+        display: inline;
+        @include rem-fallback(font-size, 5);
+    }
+    a:not(:first-child) {
+        padding-left: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: $base-text-color;
+    }
+    background-color: $contrast-background;
+    color: $contrast-text-color;
+    @include rem-fallback(padding, 1);
+    @include rem-fallback(margin-bottom, 1);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top: 1px solid $accent-text-color;
+    max-width: 50%;
+    @include media("<=tablet") {
+        max-width: 70%;
+    }
+}
+
+.finalMessage {
+    font-family: $title-font;
+    background-color: $accent-background;
+    color: $accent-text-color;
+    @include rem-fallback(padding, 1);
+    @include rem-fallback(margin-top, 1);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    max-width: 50%;
+    @include media("<=tablet") {
+        max-width: 70%;
+        text-align: left;
+    }
+}
