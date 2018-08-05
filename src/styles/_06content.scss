@@ -23,29 +23,6 @@ article {
     @include rem-fallback(padding, 5);
 }
 
-#bulb {
-    position: fixed;
-    z-index: -1; // width: 100%; // the height here will push the article div down. Don't mess with this without rechecking the layout on multiple viewports
-    // height: 40em;
-    // margin: 0 auto;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: cover;
-    } // @include media("<=phone") {
-    //     //     background-color: #def;
-    //     // }
-    //     // @include media(">phone") {
-    //     //     background-color: #abc;
-    //     // }
-    //     // @include media(">=815px", "<desktop") {
-    //     //     background-color: #fed;
-    //     // }
-    //     // @include media(">=desktop") {
-    //     //     background-color: #fab;
-    //     // }
-}
-
 * {
     @include selection {
         background: $base-text-color;

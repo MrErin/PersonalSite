@@ -303,14 +303,6 @@ article {
   padding: 50px;
   padding: 5rem; }
 
-#bulb {
-  position: fixed;
-  z-index: -1; }
-  #bulb img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; }
-
 * ::-moz selection {
   background: #D6D6D6;
   color: #fff; }
@@ -536,5 +528,27 @@ ul li {
 
 footer {
   border-top: 1px solid #648500; }
+
+#bulb {
+  position: fixed;
+  z-index: -1;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; }
+
+.zero:before {
+  content: url("../assets/img/bulb0.png"); }
+
+.one:before {
+  content: url("../assets/img/bulb1.png"); }
+
+.two:before {
+  content: url("../assets/img/bulb2.png"); }
+
+.three:before {
+  content: url("../assets/img/bulb3.png"); }
+
+.four:before {
+  content: url("../assets/img/bulb4.png"); }
 
 /*# sourceMappingURL=styles.css.map */

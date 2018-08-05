@@ -1,0 +1,53 @@
+#bulb {
+    position: fixed;
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.zero:before {
+    content: url('../assets/img/bulb0.png'); // @include media("<=tablet") {
+    //     content: url('../assets/img/bulb1.png');
+    //     height: auto;
+    //     width: auto;
+    // }
+}
+
+.one:before {
+    content: url('../assets/img/bulb1.png'); // @include media("<=tablet") {
+    //     content: url('../assets/img/bulb1.png');
+    //     height: auto;
+    //     width: auto;
+    // }
+}
+
+.two:before {
+    content: url('../assets/img/bulb2.png'); // @include media("<=tablet") {
+    //     content: url('../assets/img/bulb1.png');
+    //     height: auto;
+    //     width: auto;
+    // }
+}
+
+.three:before {
+    content: url('../assets/img/bulb3.png'); // @include media("<=tablet") {
+    //     content: url('../assets/img/bulb1.png');
+    //     height: auto;
+    //     width: auto;
+    // }
+}
+
+.four:before {
+    content: url('../assets/img/bulb4.png'); // @include media("<=tablet") {
+    //     content: url('../assets/img/bulb1.png');
+    //     height: auto;
+    //     width: auto;
+    // }
+}
+
+// <img id="img0" src="./assets/img/bulb0.png">
+// <img id="img1" src="./assets/img/bulb1.png">
+// <img id="img2" src="./assets/img/bulb2.png">
+// <img id="img3" src="./assets/img/bulb3.png">
+// <img id="img4" src="./assets/img/bulb4.png">
