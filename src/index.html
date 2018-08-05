@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Erin Meaker</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
 </head>
@@ -26,7 +27,7 @@
                         <a href="#ProjectsA">Projects</a>
                     </li>
                     <li>
-                        <a href="#SkillsA">Skills & Technologies</a>
+                        <a href="#SkillsA">Technologies & Skills</a>
                     </li>
                     <li>
                         <a href="#ContactA">Contact</a>
@@ -50,7 +51,7 @@
 
             <span class="anchor" id="BioA"></span>
             <section id="Bio" class="textContent">
-                <h2 id="BioHead">BIOGRAPHY</h2>
+                <h2 class="sectionHead" id="BioHead">BIOGRAPHY</h2>
                 <div class="contentWrap">
                     <div class="centered">
                         <img class="bioHeadshot" src="./assets/img/erin.jpg" />
@@ -71,7 +72,7 @@
 
             <span class="anchor" id="ProjectsA"></span>
             <section id="Projects" class="textContent">
-                <h2 id="ProjectsHead">Projects</h2>
+                <h2 class="sectionHead" id="ProjectsHead">Projects</h2>
                 <div class="contentWrap">
                     <div class="centered">
                         <!-- start of project section -->
@@ -92,15 +93,78 @@
 
             <span class="anchor" id="SkillsA"></span>
             <section id="Skills" class="textContent">
-                <h2 id="SkillsHead">SKILLS</h2>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                    tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                    semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                <h2 class="sectionHead" id="SkillsHead">TECHNOLOGIES & SKILLS</h2>
+                <div class="contentWrap">
+                    <div class="centered">
+                        <div class="techContainer">
+                            <div class="techItem">
+                                <i class="devicon-python-plain-wordmark" alt=""></i>
+                                <p class="hidden">Python</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-django-line-wordmark" alt=""></i>
+                                <p class="hidden">Django</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-javascript-plain" alt=""></i>
+                                <p class="hidden">JavaScript</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-react-original-wordmark" alt=""></i>
+                                <p class="hidden">React.js</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-css3-plain-wordmark" alt=""></i>
+                                <p class="hidden">CSS3</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-html5-plain-wordmark" alt=""></i>
+                                <p class="hidden">HTML5</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-git-plain-wordmark" alt=""></i>
+                                <p class="hidden">Git</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-github-plain-wordmark" alt=""></i>
+                                <p class="hidden">GitHub</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-grunt-line-wordmark" alt=""></i>
+                                <p class="hidden">Grunt</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-sass-original" alt=""></i>
+                                <p class="hidden">Sass</p>
+                            </div>
+                            <div class="techItem">
+                                <i class="devicon-wordpress-plain-wordmark" alt=""></i>
+                                <p class="hidden">WordPress</p>
+                            </div>
+                        </div>
+                        <hr class="divbar">
+                        <p class="contentHeading">Skills</p>
+                        <ul class="skillList">
+                            <li>SQL</li>
+                            <li>RESTful API</li>
+                            <li>Data Analysis</li>
+                            <li>Scrum Methodology</li>
+                            <li>Agile Software Development</li>
+                            <li>Documentation</li>
+                            <li>Technical Writing & Editing</li>
+                            <li>Graphic Design</li>
+                            <li>Digital Photography</li>
+                            <li>Test Driven Development</li>
+                            <li>Research</li>
+                            <li>Business Requirement Analysis & Design</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <span class="anchor" id="ContactA"></span>
             <section id="Contact" class="textContent">
-                <h2 id="ContactHead">CONTACT</h2>
+                <h2 class="sectionHead" id="ContactHead">CONTACT</h2>
                 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
                     tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
                     semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
@@ -113,12 +177,6 @@
     </footer>
 
     <script src="./bundle.js"></script>
-    <script>
-        function navbar() {
-            const menu = document.getElementById('nav')
-            menu.classList.toggle('open')
-        }
-    </script>
 </body>
 
 </html>

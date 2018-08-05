@@ -68,8 +68,6 @@ h6 {
     font-weight: 500;
     @include rem-fallback(margin, 0, 0, 1.6);
     padding: 0;
-    border-bottom: 1px solid $base-text-color;
-    border-top: 1px solid $base-text-color;
 }
 
 h1 {
@@ -129,7 +127,7 @@ h6 {
 
 .contentHeading {
     margin-top: 20px;
-    @include rem-fallback(font-size, 2.3);
+    @include rem-fallback(font-size, 4);
     text-align: center;
     font-family: $title-font, serif;
 }
@@ -157,4 +155,47 @@ h6 {
     margin-top: 25px; // margin: 25px 40px;
     @include rem-fallback(font-size, 1.8);
     padding-bottom: 25px;
+}
+
+.techContainer {
+    overflow: hidden;
+    @include clearfix();
+}
+
+.techItem {
+    float: left;
+    @include rem-fallback(padding, 1);
+    @include rem-fallback(font-size, 10);
+    @include clearfix();
+}
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+ul {
+    li {
+        list-style-type: square;
+        list-style-position: inside;
+    }
+}
+
+.skillList {
+    text-align: left;
+    padding-left: 30%;
+    @include media("<=tablet") {
+        padding: 0;
+    }
+}
+
+.sectionHead {
+    border-bottom: 1px solid $base-text-color;
+    border-top: 1px solid $base-text-color;
+    font-family: $callout-font, serif;
+    @include rem-fallback(font-size, 5);
 }

@@ -226,7 +226,8 @@ Navbar
   position: absolute;
   right: 0; }
   #nav ul li {
-    float: left; }
+    float: left;
+    list-style-type: none; }
     #nav ul li a {
       display: block;
       color: #D6D6D6;
@@ -334,9 +335,7 @@ h6 {
   font-weight: 500;
   margin: 0px 0px 16px;
   margin: 0rem 0rem 1.6rem;
-  padding: 0;
-  border-bottom: 1px solid #D6D6D6;
-  border-top: 1px solid #D6D6D6; }
+  padding: 0; }
 
 h1 {
   font-size: 36px;
@@ -402,8 +401,8 @@ h6 {
 
 .contentHeading {
   margin-top: 20px;
-  font-size: 23px;
-  font-size: 2.3rem;
+  font-size: 40px;
+  font-size: 4rem;
   text-align: center;
   font-family: Lustria, serif; }
 
@@ -430,5 +429,51 @@ h6 {
   font-size: 18px;
   font-size: 1.8rem;
   padding-bottom: 25px; }
+
+.techContainer {
+  overflow: hidden; }
+  .techContainer:before, .techContainer:after {
+    content: "";
+    display: table; }
+  .techContainer:after {
+    clear: both; }
+
+.techItem {
+  float: left;
+  padding: 10px;
+  padding: 1rem;
+  font-size: 100px;
+  font-size: 10rem; }
+  .techItem:before, .techItem:after {
+    content: "";
+    display: table; }
+  .techItem:after {
+    clear: both; }
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+ul li {
+  list-style-type: square;
+  list-style-position: inside; }
+
+.skillList {
+  text-align: left;
+  padding-left: 30%; }
+  @media (max-width: 768px) {
+    .skillList {
+      padding: 0; } }
+
+.sectionHead {
+  border-bottom: 1px solid #D6D6D6;
+  border-top: 1px solid #D6D6D6;
+  font-family: Courier, serif;
+  font-size: 50px;
+  font-size: 5rem; }
 
 /*# sourceMappingURL=styles.css.map */
