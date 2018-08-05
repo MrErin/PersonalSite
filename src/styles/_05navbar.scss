@@ -92,9 +92,6 @@ Navbar
     position: absolute;
     top: 0;
     left: 0;
-    &:after {
-      content: ': Full Stack Developer';
-    }
   }
 }
 
@@ -114,6 +111,11 @@ Navbar
   }
 }
 
+#myName {
+  border-top: none;
+  border-bottom: none;
+}
+
 @include media("<=tablet") {
   #header {
     .container {
@@ -121,9 +123,6 @@ Navbar
     }
     h1 {
       left: 3%;
-      &:after {
-        content: '';
-      }
     }
   }
   #nav {

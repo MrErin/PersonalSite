@@ -37,8 +37,8 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ### Content:
 
-* [] Bio
-* [] Resume
+* [x] Bio
+* [x] Projects
 * [] Skills
 * [] Contact Info
 * [] Footer
@@ -47,6 +47,7 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 * Try to figure out how to change the mechanism from scrolling to depending on the last heading that was visible in the viewport. For example, if I have a navbar and someone goes straight to the projects heading, I'd like the bulb to go ahead and light up to that level.
   * [Example fiddle](https://jsfiddle.net/n4pdx/636/)
+* Get all content finalized and in place.
 
 ## Completed Features:
 

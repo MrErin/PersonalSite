@@ -81,15 +81,15 @@ h2 {
 }
 
 h3 {
-    @include font-size($body-font-size+.8);
+    @include font-size($body-font-size+0.8);
 }
 
 h4 {
-    @include font-size($body-font-size+.4);
+    @include font-size($body-font-size+0.4);
 }
 
 h5 {
-    @include font-size($body-font-size+.2);
+    @include font-size($body-font-size+0.2);
 }
 
 h6 {
@@ -107,6 +107,8 @@ h6 {
 
 .textContent {
     min-height: 40em;
+    margin-top: 10em;
+    margin-bottom: 7em;
 }
 
 .contentWrap {
@@ -114,7 +116,7 @@ h6 {
     height: 90%;
 }
 
-.headshot {
+.bioHeadshot {
     width: 200px;
     height: 200px;
     border-radius: 100px;
@@ -125,19 +127,29 @@ h6 {
     }
 }
 
-.name {
+.contentHeading {
     margin-top: 20px;
-    @include rem-fallback(font-size, 2.1);
-    font-weight: $strongweight;
+    @include rem-fallback(font-size, 2.3);
     text-align: center;
     font-family: $title-font, serif;
 }
 
-.info {
+.contentSubhead {
     margin-top: -5px;
     margin-bottom: 5px;
-    @include rem-fallback(font-size, 1.8);
+    padding-bottom: 3px;
+    @include rem-fallback(font-size, 2.0);
     text-align: center;
+    font-family: $title-font, serif;
+}
+
+.divbar {
+    border-style: solid;
+    border-color: $base-text-color;
+    width: 60%;
+    @include media("<=tablet") {
+        width: 80%;
+    }
 }
 
 .desc {
