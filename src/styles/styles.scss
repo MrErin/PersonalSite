@@ -1,16 +1,13 @@
 /*
 
-Author:
-Project:
+Author: Erin Meaker
+Project: Personal portfolio site
 
-comment headings generator: http: //patorjk.com/software/taag/#p=display&f=Electronic&t=Grid
-        
 */
 
 @import "01base";
-@import "07media-queries";
 @import "02mixins";
 @import "03variables";
-@import "04defaults";
+@import "04includemedia";
 @import "05navbar";
-@import "06grid-layout";
+@import "06content";

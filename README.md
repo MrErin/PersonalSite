@@ -14,6 +14,7 @@ There will be a light bulb graphic as the background of the page. When the page 
       * Hamburger menu overlaying bulb image div
       * Bulb image div (should fade update on scroll as before)
         * For smaller viewports, there should be a small set of images to load
+        * Including the bio image
     * These divs scroll, disappearing under the image div
       * Content div
       * Footer
@@ -34,7 +35,13 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ## Currently Working On:
 
-Mobile Design
+### Content:
+
+[] Bio
+[] Resume
+[] Skills
+[] Contact Info
+[] Footer
 
 
 
@@ -45,10 +52,14 @@ Mobile Design
 
 ## Completed Features:
 
+###Mobile Design:
+
 [x] Get two divs to stack
 [x] Don't let the bulb div overlay the content div
 [x] Start the content at the bottom of the bulb div
 [x] Build responsive menu
+
+
 
 ## HTML Page Structure:
 
