@@ -433,6 +433,7 @@ h6 {
 .techContainer {
   overflow: hidden;
   padding-left: 10%;
+  padding-right: 10%;
   width: 100%;
   margin: auto; }
   .techContainer:before, .techContainer:after {
@@ -442,7 +443,7 @@ h6 {
     clear: both; }
 
 .techItem {
-  float: left;
+  display: inline-block;
   padding: 10px;
   padding: 1rem;
   font-size: 100px;

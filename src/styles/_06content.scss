@@ -161,12 +161,14 @@ h6 {
     overflow: hidden;
     @include clearfix();
     padding-left: 10%;
+    padding-right: 10%;
     width: 100%;
     margin: auto;
 }
 
 .techItem {
-    float: left;
+    // float: left;
+    display: inline-block;
     @include rem-fallback(padding, 1);
     @include rem-fallback(font-size, 10);
     @include clearfix();

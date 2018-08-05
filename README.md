@@ -37,11 +37,11 @@ There will be a light bulb graphic as the background of the page. When the page 
 
 ### Content:
 
-* [x] Bio
-* [x] Projects
-* [] Skills
-* [] Contact Info
-* [] Footer
+* [] Bio
+* [] Projects
+* [x] Skills
+* [x] Contact Info
+* [x] Footer
 
 ## Remaining Features:
 
