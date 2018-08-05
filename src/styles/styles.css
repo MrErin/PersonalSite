@@ -528,4 +528,12 @@ ul li {
       max-width: 70%;
       text-align: left; } }
 
+.colorPop {
+  color: #648500;
+  font-size: 20px;
+  font-size: 2rem; }
+
+footer {
+  border-top: 1px solid #648500; }
+
 /*# sourceMappingURL=styles.css.map */

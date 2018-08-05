@@ -251,3 +251,13 @@ ul {
         text-align: left;
     }
 }
+
+.colorPop {
+    color: $accent-background;
+    @include rem-fallback(font-size, 2);
+}
+
+footer {
+    border-top: 1px solid $accent-background; // min-height: 10%;
+    // @include rem-fallback(padding, 1);
+}
