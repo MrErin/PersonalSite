@@ -2,7 +2,6 @@ const $ = require('jquery')
 
 const $headers = $('.anchor')
 const $window = $(window)
-const bulbDiv = $('#bulb')
 
 const viewCheck = () => {
 	const windowHeight = $window.height()
@@ -15,12 +14,29 @@ const viewCheck = () => {
 		let elementHeight = $element.outerHeight()
 		let elementTopPosition = $element.offset().top
 		let elementBottomPosition = (elementTopPosition + elementHeight)
-		let changeClass = classPicker(elHead)
 
-		if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= windowBottomPosition)) {
-			bulbDiv.addClass(changeClass)
-		} else {
-			bulbDiv.removeClass(changeClass)
+
+		// * Failed attempt to force set the topmost div to bulb0
+		// if ($window.scrollTop() >= $('#HomeA').offset().top){
+		// 	$('#bulb').attr('src', classPicker('HomeA')).fadeIn(1000)
+		// } else
+
+		// * This one was closer to working (try it without the stop(true, true) to see), but it wasn't there yet.
+		// if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= windowBottomPosition)) {
+		// 	$('#bulb').attr('src', classPicker(elHead)).fadeIn(1000)
+		// } else {
+		// 	$('#bulb').stop(true, true).fadeOut(1000)
+		// }
+
+		// * Reconfiguring to set a single variable with the current image.
+
+		let currentImage = classPicker(elHead)
+		if (currentImage !== $('#bulb').attr('src')) {
+			console.log(`image was ${currentImage}`)
+			currentImage = classPicker(elHead)
+			console.log(`image now ${currentImage}`)
+			$('#bulb').fadeOut(1000)
+			$('#bulb').attr('src', currentImage).fadeIn(1000)
 		}
 	})
 }
@@ -29,23 +45,23 @@ const viewCheck = () => {
 const classPicker = (header) => {
 	switch (header) {
 	case 'HomeA':
-		return 'zero'
+		return './assets/img/bulb0.png'
 		break
 	case 'BioA':
-		return 'one'
+		return './assets/img/bulb1.png'
 		break
 	case 'ProjectsA':
-		return 'two'
+		return './assets/img/bulb2.png'
 		break
 	case 'SkillsA':
-		return 'three'
+		return './assets/img/bulb3.png'
 		break
 	case 'ContactA':
-		return 'four'
+		return './assets/img/bulb4.png'
 		break
 	default:
 		console.log(`backgroundChange script attempting to pass ${header} to the add switch statement`)
-		return 'zero'
+		return './assets/img/bulb0.png'
 		break
 	}
 }
@@ -55,55 +71,6 @@ const backgroundChange = () => {
 
 	$window.on('scroll resize', viewCheck)
 	$window.trigger('scroll')
-// 	// $(document).scroll(function () {
-// 	// 	let y = $(this).scrollTop()
-
-// 	// 	if (y > 150) {
-// 	// 		$('#bulb > img:first').next().appendTo('#bulb').fadeIn({})
-// 	// 	}
-// 	// 	else {$('#img1').fadeOut('fast')};
-
-// 	// 	if (y > 300) {
-// 	// 		$('#img2').fadeIn({})
-// 	// 	}
-// 	// 	else {$('#img2').fadeOut('fast')};
-
-// 	// 	if (y > 450) {
-// 	// 		$('#img3').fadeIn({})
-// 	// 	}
-// 	// 	else {$('#img3').fadeOut('fast')};
-
-// 	// })
-
-
-// // The above was commented out when this was still available. Recommenting the whole thing because of a new approach
-
-// 	let num = 1
-// 	$('img').attr('src','http://sendamessage.to/dist/images/fistbump-700/1.jpg')
-
-// 	$(window).scroll(function () {
-// 	  num = $(window).scrollTop() / 3
-
-// 	 if( parseInt(num) === num){
-
-// 		  $('img').attr('src','http://sendamessage.to/dist/images/fistbump-700/' + num + '.jpg')}
-// 	  else{}
-
-// 	  if (num < 1){
-// 			$('img').attr('src','http://sendamessage.to/dist/images/fistbump-700/1.jpg')
-// 	  }
-// 		if (num > 30){
-// 			$('img').attr('src','http://sendamessage.to/dist/images/fistbump-700/30.jpg')
-// 		  $('img').css('position','absolute')
-// 	  }
-
-
-// 	})
-
-
-
 }
 
 module.exports = backgroundChange
-
-// $('#graphics > img:first').next().appendTo('#graphics')
