@@ -6,7 +6,7 @@ const classPicker = (header) => {
 		return './assets/img/bulb0.png'
 		break
 	case 'BioA':
-		return './assets/img/bulb1.png'
+		return './assets/img/bulb0.png'
 		break
 	case 'ProjectsA':
 		return './assets/img/bulb2.png'
@@ -24,37 +24,29 @@ const classPicker = (header) => {
 	}
 }
 
+$.fn.viewCheck = function() {
+	const elementTop = $(this).offset().top
+	const elementBottom = elementTop + $(this).outerHeight()
+	const viewportTop = $(window).scrollTop()
+	const viewportBottom = viewportTop + $(window).height()
+
+	return elementBottom > viewportTop && elementTop < viewportBottom
+
+}
+
+
 const backgroundChange = () => {
-	const $headerElements = $('.anchor')
-	const $window = $(window)
-	const windowHeight = $window.height()
-	const windowTopPosition = $window.scrollTop()
-	const windowBottomPosition = (windowTopPosition + windowHeight)
-	let scrollTimeout
-	const throttle = 500
-
-	$window.on('scroll resize', function(){
-		if (!scrollTimeout) {
-			scrollTimeout = setTimeout(function(){
-				$.each($headerElements, function(){
-					let $element = $(this)
-					let elHead = $element.attr('id')
-					const elementHeight = $element.outerHeight()
-					const elementTopPosition = $element.offset().top
-					const elementBottomPosition = (elementTopPosition + elementHeight)
-					if ((elementBottomPosition >= windowTopPosition) &&
-					(elementTopPosition <= windowBottomPosition)){
-						// $('#bulb').attr('src', classPicker(elHead)).fadeIn(1000)
-						console.log(elHead)
-					}
+	$(window).on('resize scroll', function() {
+		$('.anchor').each(function() {
+			let activeAnchor = $(this).attr('id')
+			if($(this).viewCheck()){
+				$('#bulb').fadeOut(function(){
+					$(this).load(function() { $(this).fadeIn()})
+					$(this).attr('src', classPicker(activeAnchor))
 				})
-				scrollTimeout = null
-			}, throttle)
-		}
+			}
+		})
 	})
-	$window.trigger('scroll')
-
-
 
 }
 
