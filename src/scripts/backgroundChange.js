@@ -1,47 +1,5 @@
 const $ = require('jquery')
 
-const $headers = $('.anchor')
-const $window = $(window)
-
-const viewCheck = () => {
-	const windowHeight = $window.height()
-	const windowTopPosition = $window.scrollTop()
-	const windowBottomPosition = (windowTopPosition + windowHeight)
-
-	$.each($headers, function(){
-		let $element = $(this)
-		let elHead = $element.prop('id')
-		let elementHeight = $element.outerHeight()
-		let elementTopPosition = $element.offset().top
-		let elementBottomPosition = (elementTopPosition + elementHeight)
-
-
-		// * Failed attempt to force set the topmost div to bulb0
-		// if ($window.scrollTop() >= $('#HomeA').offset().top){
-		// 	$('#bulb').attr('src', classPicker('HomeA')).fadeIn(1000)
-		// } else
-
-		// * This one was closer to working (try it without the stop(true, true) to see), but it wasn't there yet.
-		// if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= windowBottomPosition)) {
-		// 	$('#bulb').attr('src', classPicker(elHead)).fadeIn(1000)
-		// } else {
-		// 	$('#bulb').stop(true, true).fadeOut(1000)
-		// }
-
-		// * Reconfiguring to set a single variable with the current image.
-
-		let currentImage = classPicker(elHead)
-		if (currentImage !== $('#bulb').attr('src')) {
-			console.log(`image was ${currentImage}`)
-			currentImage = classPicker(elHead)
-			console.log(`image now ${currentImage}`)
-			$('#bulb').fadeOut(1000)
-			$('#bulb').attr('src', currentImage).fadeIn(1000)
-		}
-	})
-}
-
-
 const classPicker = (header) => {
 	switch (header) {
 	case 'HomeA':
@@ -67,10 +25,37 @@ const classPicker = (header) => {
 }
 
 const backgroundChange = () => {
+	const $headerElements = $('.anchor')
+	const $window = $(window)
+	const windowHeight = $window.height()
+	const windowTopPosition = $window.scrollTop()
+	const windowBottomPosition = (windowTopPosition + windowHeight)
+	let scrollTimeout
+	const throttle = 500
 
-
-	$window.on('scroll resize', viewCheck)
+	$window.on('scroll resize', function(){
+		if (!scrollTimeout) {
+			scrollTimeout = setTimeout(function(){
+				$.each($headerElements, function(){
+					let $element = $(this)
+					let elHead = $element.attr('id')
+					const elementHeight = $element.outerHeight()
+					const elementTopPosition = $element.offset().top
+					const elementBottomPosition = (elementTopPosition + elementHeight)
+					if ((elementBottomPosition >= windowTopPosition) &&
+					(elementTopPosition <= windowBottomPosition)){
+						// $('#bulb').attr('src', classPicker(elHead)).fadeIn(1000)
+						console.log(elHead)
+					}
+				})
+				scrollTimeout = null
+			}, throttle)
+		}
+	})
 	$window.trigger('scroll')
+
+
+
 }
 
 module.exports = backgroundChange
