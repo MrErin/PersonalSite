@@ -36,16 +36,35 @@ $.fn.viewCheck = function() {
 
 
 const backgroundChange = () => {
+	let scrollTimeout
+	const throttle = 1000
+	let lastScrollTop = 0
+	// jquery timer like a reverse
+
 	$(window).on('resize scroll', function() {
-		$('.anchor').each(function() {
-			let activeAnchor = $(this).attr('id')
-			if($(this).viewCheck()){
-				$('#bulb').fadeOut(function(){
-					$(this).load(function() { $(this).fadeIn()})
-					$(this).attr('src', classPicker(activeAnchor))
+		let st = $(this).scrollTop()
+		if (!scrollTimeout) {
+			scrollTimeout = setTimeout(function() {
+				$('.anchor').each(function() {
+					let activeAnchor = $(this).attr('id')
+					if($(this).viewCheck()){
+						// $('#bulb').fadeOut(function(){
+						// 	$(this).on('load', (function() { $(this).fadeIn()}))
+						// 	$(this).attr('src', classPicker(activeAnchor))
+						// })
+						if (st > lastScrollTop){
+							//down
+							console.log(`down; st = ${st} lastscrolltop = ${lastScrollTop}`)
+						} else {
+							//up
+							console.log(`up; st = ${st} lastscrolltop = ${lastScrollTop}`)
+						}
+						lastScrollTop = st
+					}
 				})
-			}
-		})
+				scrollTimeout = null
+			}, throttle)
+		}
 	})
 
 }
