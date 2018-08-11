@@ -9,13 +9,13 @@ const classPicker = (header) => {
 		return './assets/img/bulb0.png'
 		break
 	case 'ProjectsA':
-		return './assets/img/bulb2.png'
+		return './assets/img/bulb1.png'
 		break
 	case 'SkillsA':
-		return './assets/img/bulb3.png'
+		return './assets/img/bulb2.png'
 		break
 	case 'ContactA':
-		return './assets/img/bulb4.png'
+		return './assets/img/bulb3.png'
 		break
 	default:
 		console.log(`backgroundChange script attempting to pass ${header} to the add switch statement`)
@@ -37,7 +37,7 @@ $.fn.viewCheck = function() {
 
 const backgroundChange = () => {
 	let scrollTimeout
-	const throttle = 1000
+	const throttle = 500
 	let lastScrollTop = 0
 	// jquery timer like a reverse
 
@@ -52,14 +52,18 @@ const backgroundChange = () => {
 						// 	$(this).on('load', (function() { $(this).fadeIn()}))
 						// 	$(this).attr('src', classPicker(activeAnchor))
 						// })
-						if (st > lastScrollTop){
-							//down
-							console.log(`down; st = ${st} lastscrolltop = ${lastScrollTop}`)
-						} else {
-							//up
-							console.log(`up; st = ${st} lastscrolltop = ${lastScrollTop}`)
-						}
-						lastScrollTop = st
+
+						$('#bulb').attr('src', classPicker(activeAnchor)).fadeIn(2000)
+
+
+						// if (st > lastScrollTop){
+						// 	//down
+						// 	console.log(`down; st = ${st} lastscrolltop = ${lastScrollTop}`)
+						// } else {
+						// 	//up
+						// 	console.log(`up; st = ${st} lastscrolltop = ${lastScrollTop}`)
+						// }
+						// lastScrollTop = st
 					}
 				})
 				scrollTimeout = null
