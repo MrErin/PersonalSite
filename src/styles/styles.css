@@ -532,18 +532,32 @@ ul li {
 footer {
   border-top: 1px solid #648500; }
 
+.content {
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: absolute; }
+
 #bulb {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background-attachment: fixed;
-  background-image: url("../assets/img/bulb0.png"); }
+  position: relative;
+  z-index: -2;
+  top: 0;
+  left: 0; }
   #bulb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: fixed; }
+    position: absolute; }
+
+#zero {
+  z-index: -2; }
+
+.active {
+  z-index: -1;
+  top: 0;
+  left: 0; }
+
+.hideImg {
+  opacity: 0; }
 
 /*# sourceMappingURL=styles.css.map */

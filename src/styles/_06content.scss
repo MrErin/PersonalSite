@@ -244,3 +244,10 @@ footer {
     border-top: 1px solid $accent-background; // min-height: 10%;
     // @include rem-fallback(padding, 1);
 }
+
+.content {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: absolute;
+}

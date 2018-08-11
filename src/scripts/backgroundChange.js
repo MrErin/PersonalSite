@@ -2,24 +2,22 @@ const $ = require('jquery')
 
 const classPicker = (header) => {
 	switch (header) {
-	case 'HomeA':
-		return './assets/img/bulb0.png'
-		break
-	case 'BioA':
-		return './assets/img/bulb0.png'
-		break
 	case 'ProjectsA':
-		return './assets/img/bulb1.png'
+		return 'one'
 		break
 	case 'SkillsA':
-		return './assets/img/bulb2.png'
+		return 'two'
 		break
 	case 'ContactA':
-		return './assets/img/bulb3.png'
+		return 'three'
+		break
+	case 'HomeA':
+	case 'BioA':
+		return 'zero'
 		break
 	default:
 		console.log(`backgroundChange script attempting to pass ${header} to the add switch statement`)
-		return './assets/img/bulb0.png'
+		return 'zero'
 		break
 	}
 }
@@ -53,9 +51,7 @@ const backgroundChange = () => {
 						// 	$(this).attr('src', classPicker(activeAnchor))
 						// })
 
-						$('#bulb').attr('src', classPicker(activeAnchor)).fadeIn(2000)
-
-
+						// $('#bulb').attr('src', classPicker(activeAnchor)).fadeIn(2000)
 						// if (st > lastScrollTop){
 						// 	//down
 						// 	console.log(`down; st = ${st} lastscrolltop = ${lastScrollTop}`)
@@ -64,6 +60,13 @@ const backgroundChange = () => {
 						// 	console.log(`up; st = ${st} lastscrolltop = ${lastScrollTop}`)
 						// }
 						// lastScrollTop = st
+
+
+
+
+
+
+
 					}
 				})
 				scrollTimeout = null
