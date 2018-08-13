@@ -79,7 +79,7 @@ const backgroundChange = () => {
 						oldImg.stop(true).fadeOut(500, function() {
 							$(this).remove()
 						})
-						newImg.fadeIn(500)
+						newImg.fadeIn(500).addClass('bulbImg changeThis')
 						return false
 					}
 				})
