@@ -30,14 +30,14 @@ const viewCheck = () => {
 
 		// * Reconfiguring to set a single variable with the current image.
 
-		let currentImage = classPicker(elHead)
-		if (currentImage !== $('#bulb').attr('src')) {
-			console.log(`image was ${currentImage}`)
-			currentImage = classPicker(elHead)
-			console.log(`image now ${currentImage}`)
-			$('#bulb').fadeOut(1000)
-			$('#bulb').attr('src', currentImage).fadeIn(1000)
-		}
+		// let currentImage = classPicker(elHead)
+		// if (currentImage !== $('#bulb').attr('src')) {
+		// 	console.log(`image was ${currentImage}`)
+		// 	currentImage = classPicker(elHead)
+		// 	console.log(`image now ${currentImage}`)
+		// 	$('#bulb').fadeOut(1000)
+		// 	$('#bulb').attr('src', currentImage).fadeIn(1000)
+		// }
 	})
 }
 
