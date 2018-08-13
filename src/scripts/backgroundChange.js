@@ -1,28 +1,30 @@
 const $ = require('jquery')
 
 const classPicker = (header) => {
+	// This function returns which image should be shown depending on which anchor is passed in
 	switch (header) {
 	case 'ProjectsA':
-		return 'one'
+		return './assets/img/bulb1.png'
 		break
 	case 'SkillsA':
-		return 'two'
+		return './assets/img/bulb2.png'
 		break
 	case 'ContactA':
-		return 'three'
+		return './assets/img/bulb3.png'
 		break
 	case 'HomeA':
 	case 'BioA':
-		return 'zero'
+		return './assets/img/off.png'
 		break
 	default:
 		console.log(`backgroundChange script attempting to pass ${header} to the add switch statement`)
-		return 'zero'
+		return './assets/img/off.png'
 		break
 	}
 }
 
 $.fn.viewCheck = function() {
+	// This function returns true or false for whether or not the passed element is in the viewport.
 	const elementTop = $(this).offset().top
 	const elementBottom = elementTop + $(this).outerHeight()
 	const viewportTop = $(window).scrollTop()
@@ -37,7 +39,14 @@ const backgroundChange = () => {
 	let scrollTimeout
 	const throttle = 500
 	let lastScrollTop = 0
-	// jquery timer like a reverse
+
+	//preloads images
+	let bulbs = []
+	$('bulbImg').each(function() {
+		let img = new Image()
+		img.src = this.href
+		bulbs.push(img)
+	})
 
 	$(window).on('resize scroll', function() {
 		let st = $(this).scrollTop()
@@ -61,12 +70,17 @@ const backgroundChange = () => {
 						// }
 						// lastScrollTop = st
 
+						let oldImg = $('#bulbDiv .changeThis')
+						let img = new Image()
+						img.src = classPicker(activeAnchor)
+						let newImg = $(img).hide()
+						$('#bulbDiv').append(img)
 
-
-
-
-
-
+						oldImg.stop(true).fadeOut(500, function() {
+							$(this).remove()
+						})
+						newImg.fadeIn(500)
+						return false
 					}
 				})
 				scrollTimeout = null
