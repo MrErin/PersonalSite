@@ -241,8 +241,9 @@ ul {
 }
 
 footer {
-    border-top: 1px solid $accent-background; // min-height: 10%;
-    // @include rem-fallback(padding, 1);
+    border-top: 1px solid $accent-background;
+    min-height: 10%;
+    @include rem-fallback(padding, 1);
 }
 
 .content {

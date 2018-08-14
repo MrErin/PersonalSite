@@ -33,6 +33,8 @@ $.fn.viewCheck = function() {
 	return elementBottom > viewportTop && elementTop < viewportBottom
 
 }
+// TODO: change the calculation to determine whether the anchor is in the middle of the viewport
+// https://jsfiddle.net/atcwL1mz/
 
 
 const backgroundChange = () => {
@@ -49,11 +51,18 @@ const backgroundChange = () => {
 				if ($(this).attr('id') !== oldAnchorId) {
 					console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}, oldImg = ${oldImg.attr('id')}, newImg = ${newImg.attr('id')}`)
 
+
+					// css keyframes
+					oldImg.stop(true).fadeOut('fast')
+					newImg.fadeIn('fast')
+
 					oldImg.removeClass('changeThis')
 					oldImg.addClass('hideThis')
 					newImg.removeClass('hideThis')
 					newImg.addClass('changeThis')
 					oldAnchorId = activeAnchorId
+
+
 				}
 			}
 		})
