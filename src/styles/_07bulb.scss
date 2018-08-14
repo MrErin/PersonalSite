@@ -1,12 +1,12 @@
 #bulbDiv {
     position: fixed;
-    z-index: -99;
     top: 0;
     left: 0;
+    z-index: -10;
 }
 
-#bulbStandby {
-    display: none;
+.bulbBackground {
+    z-index: 0;
 }
 
 .bulbImg {
@@ -15,8 +15,9 @@
 }
 
 .changeThis {
-    top: 0;
-    left: 0;
-    z-index: -1;
-    position: relative;
+    z-index: 1;
+}
+
+.hideThis {
+    display: none;
 }

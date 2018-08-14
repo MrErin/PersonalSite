@@ -38,75 +38,26 @@ $.fn.viewCheck = function() {
 const backgroundChange = () => {
 	let oldAnchorId = 'HomeA'
 
-	//preloads images
-	let bulbs = []
-	$('bulbImg').each(function() {
-		let img = new Image()
-		img.src = this.href
-		bulbs.push(img)
-	})
-
 	$(window).on('resize scroll', function() {
 		let oldImg = $('#bulbDiv .changeThis')
 		$('.anchor').each(function() {
 			let activeAnchor = $(this)
 			let activeAnchorId = $(this).attr('id')
 			let oldImg = $('#bulbDiv .changeThis')
-			let img = new Image()
-			img.src = $(document.getElementById(classPicker(activeAnchorId))).attr('src')
-			let newImg = $(img).hide()
-			console.log(`activeAnchorID = ${activeAnchorId}, oldImg = ${oldImg.attr('id')}, img = ${img}, newImg = ${newImg}`)
+			let newImg = $(document.getElementById(classPicker(activeAnchorId)))
 			if($(this).viewCheck()){
 				if ($(this).attr('id') !== oldAnchorId) {
-					// console.log(`anchor was ${oldAnchorId}`)
-					// oldAnchorId = $(this).attr('id')
-					// console.log(`anchor is now ${oldAnchorId}`)
-					// let newImgEl = document.getElementById(classPicker(oldAnchorId))
-					// newImg.src = $(newImgEl).attr('src')
-					$('#bulbDiv').append(img)
-					oldImg.stop(true).fadeOut(500, function() {
-						$(this).remove()
-					})
-					newImg.fadeIn(500).addClass('bulbImg changeThis')
-					return false
-					// console.log($(newImg).attr('src'))
+					console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}, oldImg = ${oldImg.attr('id')}, newImg = ${newImg.attr('id')}`)
 
-
-
-
+					oldImg.removeClass('changeThis')
+					oldImg.addClass('hideThis')
+					newImg.removeClass('hideThis')
+					newImg.addClass('changeThis')
+					oldAnchorId = activeAnchorId
 				}
-				// $('#bulb').fadeOut(function(){
-				// 	$(this).on('load', (function() { $(this).fadeIn()}))
-				// 	$(this).attr('src', classPicker(activeAnchor))
-				// })
-
-				// $('#bulb').attr('src', classPicker(activeAnchor)).fadeIn(2000)
-				// if (st > lastScrollTop){
-				// 	//down
-				// 	console.log(`down; st = ${st} lastscrolltop = ${lastScrollTop}`)
-				// } else {
-				// 	//up
-				// 	console.log(`up; st = ${st} lastscrolltop = ${lastScrollTop}`)
-				// }
-				// lastScrollTop = st
-
-
-				// let oldImg = $('#bulbDiv .changeThis')
-				// let img = new Image()
-				// img.src = classPicker(activeAnchor)
-				// let newImg = $(img).hide()
-				// $('#bulbDiv').append(img)
-
-				// oldImg.stop(true).fadeOut(500, function() {
-				// 	$(this).remove()
-				// })
-				// newImg.fadeIn(500).addClass('bulbImg changeThis')
-				// return false
 			}
 		})
 	})
-
 }
-
 
 module.exports = backgroundChange
