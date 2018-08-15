@@ -558,6 +558,9 @@ footer {
   position: fixed;
   max-width: 100%;
   height: auto; }
+  @media (max-width: 768px) {
+    .bulbImg {
+      top: 61px; } }
 
 .changeThis {
   z-index: 1; }
