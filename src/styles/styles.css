@@ -567,5 +567,55 @@ footer {
 
 .hideThis {
   display: none; }
+  max-height: auto;
+  object-fit: cover;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari and Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */ }
 
+.zero:before {
+  content: url("../assets/img/bulb0.png"); }
+
+.one:before {
+  content: url("../assets/img/bulb1.png"); }
+
+.two:before {
+  content: url("../assets/img/bulb2.png"); }
+
+.three:before {
+  content: url("../assets/img/bulb3.png"); }
+
+.four:before {
+  content: url("../assets/img/bulb4.png"); }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /*# sourceMappingURL=styles.css.map */

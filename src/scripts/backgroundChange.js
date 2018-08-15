@@ -47,12 +47,7 @@ const backgroundChange = () => {
 			let newImg = $(document.getElementById(classPicker(activeAnchorId)))
 			if($(this).viewCheck()){
 				if ($(this).attr('id') !== oldAnchorId) {
-					// console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}, oldImg = ${oldImg.attr('id')}, newImg = ${newImg.attr('id')}`)
 
-					console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}`)
-
-
-					// css keyframes
 					oldImg.stop(true).fadeOut('fast')
 					newImg.fadeIn('fast')
 
