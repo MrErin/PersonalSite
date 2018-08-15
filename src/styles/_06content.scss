@@ -257,14 +257,13 @@ footer {
 }
 
 .content {
-    z-index: 10;
-    top: 0;
-    left: 0;
-    position: absolute;
+    // top: 0;
+    // left: 0; // leaving this commented out below to remind you: DO NOT POSITION THE CONTENT ABSOLUTELY! It will make the footer disappear, and have some other weird side effects as well.
+    // position: absolute;
 }
 
 #wrapper {
-    position: absolute;
+    // position: absolute;
     height: 100%;
     width: 100%;
 }

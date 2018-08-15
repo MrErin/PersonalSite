@@ -545,14 +545,7 @@ footer {
   padding: 10px;
   padding: 1rem; }
 
-.content {
-  z-index: 10;
-  top: 0;
-  left: 0;
-  position: absolute; }
-
 #wrapper {
-  position: absolute;
   height: 100%;
   width: 100%; }
 
