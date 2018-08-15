@@ -33,31 +33,6 @@ There will be a light bulb graphic as the background of the page. When the page 
 * Responsiveness check
   * Site should look good on small screens in vertical AND horizontal orientation
 
-## Currently Working On:
-
-### Content:
-
-* [] Bio
-* [] Projects
-* [x] Skills
-* [x] Contact Info
-* [x] Footer
-
-## Remaining Features:
-
-* Try to figure out how to change the mechanism from scrolling to depending on the last heading that was visible in the viewport. For example, if I have a navbar and someone goes straight to the projects heading, I'd like the bulb to go ahead and light up to that level.
-  * [Example fiddle](https://jsfiddle.net/n4pdx/636/)
-* Get all content finalized and in place.
-
-## Completed Features:
-
-### Mobile Design:
-
-* [x] Get two divs to stack
-* [x] Don't let the bulb div overlay the content div
-* [x] Start the content at the bottom of the bulb div
-* [x] Build responsive menu
-
 ## To Run
 
 1. Clone the repo.
