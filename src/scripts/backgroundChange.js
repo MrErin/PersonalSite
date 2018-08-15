@@ -24,18 +24,16 @@ const classPicker = (header) => {
 }
 
 $.fn.viewCheck = function() {
-	// This function returns true or false for whether or not the passed element is in the viewport.
-	const elementTop = $(this).offset().top
-	const elementBottom = elementTop + $(this).outerHeight()
-	const viewportTop = $(window).scrollTop()
-	const viewportBottom = viewportTop + $(window).height()
+	// This function returns true or false for whether or not the passed element is in the middle-ish of the viewport.
 
-	return elementBottom > viewportTop && elementTop < viewportBottom
+	const windowHeight = $(window).height()
+	const middleTop = windowHeight * .3
+	const middleBottom = windowHeight * .6
+	const thisTop = $(this).offset().top - $(window).scrollTop()
+
+	return thisTop > middleTop && (thisTop + $(this).height()) < middleBottom
 
 }
-// TODO: change the calculation to determine whether the anchor is in the middle of the viewport
-// https://jsfiddle.net/atcwL1mz/
-
 
 const backgroundChange = () => {
 	let oldAnchorId = 'HomeA'
@@ -49,7 +47,9 @@ const backgroundChange = () => {
 			let newImg = $(document.getElementById(classPicker(activeAnchorId)))
 			if($(this).viewCheck()){
 				if ($(this).attr('id') !== oldAnchorId) {
-					console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}, oldImg = ${oldImg.attr('id')}, newImg = ${newImg.attr('id')}`)
+					// console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}, oldImg = ${oldImg.attr('id')}, newImg = ${newImg.attr('id')}`)
+
+					console.log(`oldAnchorId = ${oldAnchorId}, activeAnchorID = ${activeAnchorId}`)
 
 
 					// css keyframes
@@ -60,7 +60,7 @@ const backgroundChange = () => {
 					oldImg.addClass('hideThis')
 					newImg.removeClass('hideThis')
 					newImg.addClass('changeThis')
-					oldAnchorId = activeAnchorId
+					oldAnchorId = $(this).attr('id')
 
 
 				}
