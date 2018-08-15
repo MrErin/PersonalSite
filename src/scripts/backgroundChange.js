@@ -25,10 +25,11 @@ const classPicker = (header) => {
 
 $.fn.viewCheck = function() {
 	// This function returns true or false for whether or not the passed element is in the middle-ish of the viewport.
+	// * This needs some tweaking to make it responsive. I think adjusting the middleTop number will have the most impact for smaller screens.
 
 	const windowHeight = $(window).height()
-	const middleTop = windowHeight * .3
-	const middleBottom = windowHeight * .6
+	const middleTop = windowHeight * .1
+	const middleBottom = windowHeight * .4
 	const thisTop = $(this).offset().top - $(window).scrollTop()
 
 	return thisTop > middleTop && (thisTop + $(this).height()) < middleBottom
@@ -41,7 +42,6 @@ const backgroundChange = () => {
 	$(window).on('resize scroll', function() {
 		let oldImg = $('#bulbDiv .changeThis')
 		$('.anchor').each(function() {
-			let activeAnchor = $(this)
 			let activeAnchorId = $(this).attr('id')
 			let oldImg = $('#bulbDiv .changeThis')
 			let newImg = $(document.getElementById(classPicker(activeAnchorId)))
