@@ -1,76 +1,67 @@
 const $ = require('jquery')
 
-const $headers = $('.anchor')
-const $window = $(window)
-
-const viewCheck = () => {
-	const windowHeight = $window.height()
-	const windowTopPosition = $window.scrollTop()
-	const windowBottomPosition = (windowTopPosition + windowHeight)
-
-	$.each($headers, function(){
-		let $element = $(this)
-		let elHead = $element.prop('id')
-		let elementHeight = $element.outerHeight()
-		let elementTopPosition = $element.offset().top
-		let elementBottomPosition = (elementTopPosition + elementHeight)
-
-
-		// * Failed attempt to force set the topmost div to bulb0
-		// if ($window.scrollTop() >= $('#HomeA').offset().top){
-		// 	$('#bulb').attr('src', classPicker('HomeA')).fadeIn(1000)
-		// } else
-
-		// * This one was closer to working (try it without the stop(true, true) to see), but it wasn't there yet.
-		// if ((elementBottomPosition >= windowTopPosition) && (elementTopPosition <= windowBottomPosition)) {
-		// 	$('#bulb').attr('src', classPicker(elHead)).fadeIn(1000)
-		// } else {
-		// 	$('#bulb').stop(true, true).fadeOut(1000)
-		// }
-
-		// * Reconfiguring to set a single variable with the current image.
-
-		// let currentImage = classPicker(elHead)
-		// if (currentImage !== $('#bulb').attr('src')) {
-		// 	console.log(`image was ${currentImage}`)
-		// 	currentImage = classPicker(elHead)
-		// 	console.log(`image now ${currentImage}`)
-		// 	$('#bulb').fadeOut(1000)
-		// 	$('#bulb').attr('src', currentImage).fadeIn(1000)
-		// }
-	})
-}
-
-
 const classPicker = (header) => {
+	// This function returns which image should be shown depending on which anchor is passed in
 	switch (header) {
-	case 'HomeA':
-		return './assets/img/bulb0.png'
-		break
-	case 'BioA':
-		return './assets/img/bulb1.png'
-		break
 	case 'ProjectsA':
-		return './assets/img/bulb2.png'
+		return 'one'
 		break
 	case 'SkillsA':
-		return './assets/img/bulb3.png'
+		return 'two'
 		break
 	case 'ContactA':
-		return './assets/img/bulb4.png'
+		return 'three'
+		break
+	case 'HomeA':
+	case 'BioA':
+		return 'off'
 		break
 	default:
 		console.log(`backgroundChange script attempting to pass ${header} to the add switch statement`)
-		return './assets/img/bulb0.png'
+		return 'off'
 		break
 	}
 }
 
+$.fn.viewCheck = function() {
+	// This function returns true or false for whether or not the passed element is in the middle-ish of the viewport.
+	// * This needs some tweaking to make it responsive. I think adjusting the middleTop number will have the most impact for smaller screens.
+
+	const windowHeight = $(window).height()
+	const middleTop = windowHeight * .1
+	const middleBottom = windowHeight * .4
+	const thisTop = $(this).offset().top - $(window).scrollTop()
+
+	return thisTop > middleTop && (thisTop + $(this).height()) < middleBottom
+
+}
+
 const backgroundChange = () => {
+	let oldAnchorId = 'HomeA'
+
+	$(window).on('resize scroll', function() {
+		let oldImg = $('#bulbDiv .changeThis')
+		$('.anchor').each(function() {
+			let activeAnchorId = $(this).attr('id')
+			let oldImg = $('#bulbDiv .changeThis')
+			let newImg = $(document.getElementById(classPicker(activeAnchorId)))
+			if($(this).viewCheck()){
+				if ($(this).attr('id') !== oldAnchorId) {
+
+					oldImg.stop(true).fadeOut('fast')
+					newImg.fadeIn('fast')
+
+					oldImg.removeClass('changeThis')
+					oldImg.addClass('hideThis')
+					newImg.removeClass('hideThis')
+					newImg.addClass('changeThis')
+					oldAnchorId = $(this).attr('id')
 
 
-	$window.on('scroll resize', viewCheck)
-	$window.trigger('scroll')
+				}
+			}
+		})
+	})
 }
 
 module.exports = backgroundChange

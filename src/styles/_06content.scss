@@ -86,6 +86,10 @@ h6 {
     margin-bottom: 7em;
 }
 
+#bio {
+    margin-top: 20em;
+}
+
 .contentWrap {
     width: 90%;
     height: 90%;
@@ -237,6 +241,20 @@ ul {
 }
 
 footer {
-    border-top: 1px solid $accent-background; // min-height: 10%;
-    // @include rem-fallback(padding, 1);
+    border-top: 1px solid $accent-background;
+    min-height: 10%;
+    @include rem-fallback(padding, 1);
+}
+
+.content {
+    // z-index: 10;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }

@@ -1,98 +1,27 @@
-#bulb {
-    position: fixed;
+#bulbDiv {
+    position: relative;
+    z-index: -10;
+}
+
+.bulbBackground {
     z-index: -1;
+}
+
+.bulbImg {
+    top: 0;
+    left: 0;
+    position: fixed;
     max-width: 100%;
-    max-height: auto;
-    object-fit: cover;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s;
-    /* Firefox */
-    -webkit-animation: fadein 2s;
-    /* Safari and Chrome */
-    -o-animation: fadein 2s;
-    /* Opera */
-}
-
-.zero:before {
-    content: url('../assets/img/bulb0.png'); // @include media("<=tablet") {
-    //     content: url('../assets/img/bulb1.png');
-    //     height: auto;
-    //     width: auto;
-    // }
-}
-
-.one:before {
-    content: url('../assets/img/bulb1.png'); // @include media("<=tablet") {
-    //     content: url('../assets/img/bulb1.png');
-    //     height: auto;
-    //     width: auto;
-    // }
-}
-
-.two:before {
-    content: url('../assets/img/bulb2.png'); // @include media("<=tablet") {
-    //     content: url('../assets/img/bulb1.png');
-    //     height: auto;
-    //     width: auto;
-    // }
-}
-
-.three:before {
-    content: url('../assets/img/bulb3.png'); // @include media("<=tablet") {
-    //     content: url('../assets/img/bulb1.png');
-    //     height: auto;
-    //     width: auto;
-    // }
-}
-
-.four:before {
-    content: url('../assets/img/bulb4.png'); // @include media("<=tablet") {
-    //     content: url('../assets/img/bulb1.png');
-    //     height: auto;
-    //     width: auto;
-    // }
-}
-
-// <img id="img0" src="./assets/img/bulb0.png">
-// <img id="img1" src="./assets/img/bulb1.png">
-// <img id="img2" src="./assets/img/bulb2.png">
-// <img id="img3" src="./assets/img/bulb3.png">
-// <img id="img4" src="./assets/img/bulb4.png">
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+    height: auto;
+    @include media('<=tablet') {
+        top: 61px;
     }
 }
 
-@-moz-keyframes fadein {
-    /* Firefox */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.changeThis {
+    z-index: 1;
 }
 
-@-webkit-keyframes fadein {
-    /* Safari and Chrome */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadein {
-    /* Opera */
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.hideThis {
+    display: none;
 }
