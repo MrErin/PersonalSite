@@ -25,7 +25,6 @@ const classPicker = (header) => {
 
 $.fn.viewCheck = function() {
 	// This function returns true or false for whether or not the passed element is in the middle-ish of the viewport.
-	// * This needs some tweaking to make it responsive. I think adjusting the middleTop number will have the most impact for smaller screens.
 
 	const windowHeight = $(window).height()
 	const middleTop = windowHeight * .1
