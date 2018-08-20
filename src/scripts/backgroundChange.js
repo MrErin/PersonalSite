@@ -47,8 +47,8 @@ const backgroundChange = () => {
 			if($(this).viewCheck()){
 				if ($(this).attr('id') !== oldAnchorId) {
 
-					oldImg.stop(true).fadeOut('fast')
-					newImg.fadeIn('fast')
+					oldImg.stop(true).fadeOut('slow')
+					newImg.fadeIn('slow')
 
 					oldImg.removeClass('changeThis')
 					oldImg.addClass('hideThis')
