@@ -5,13 +5,20 @@ Variables
 
 $base-background: #0D0D0D;
 $base-text-color: #D6D6D6;
-$contrast-background: #33045E;
+$contrast-background: #6a0469;
 $contrast-text-color: #D6D6D6;
-$accent-background: #648500;
+$accent-background: #b67723;
 $accent-text-color: #D6D6D6;
 $test-color: red;
-$body-font: Lato;
+$body-font: Lora,
+serif,
+sans-serif;
 $body-font-size: 1.6;
-$title-font: Lustria;
+$title-font: Nunito,
+sans-serif,
+serif;
 $strongweight: 700;
-$callout-font: Courier;
+$callout-font: Courier,
+serif;
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Lora', serif;

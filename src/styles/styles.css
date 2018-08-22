@@ -288,7 +288,7 @@ html {
 body {
   background-color: #0D0D0D;
   color: #D6D6D6;
-  font-family: Lato, sans-serif;
+  font-family: Lora, serif, sans-serif, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-size: 1.6rem;
@@ -323,7 +323,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Lustria, serif;
+  font-family: Nunito, sans-serif, serif, serif;
   font-weight: 500;
   margin: 0px 0px 16px;
   margin: 0rem 0rem 1.6rem;
@@ -399,7 +399,7 @@ h6 {
   font-size: 40px;
   font-size: 4rem;
   text-align: center;
-  font-family: Lustria, serif; }
+  font-family: Nunito, sans-serif, serif, serif; }
 
 .contentSubhead {
   margin-top: -5px;
@@ -408,7 +408,7 @@ h6 {
   font-size: 20px;
   font-size: 2rem;
   text-align: center;
-  font-family: Lustria, serif; }
+  font-family: Nunito, sans-serif, serif, serif; }
 
 .divbar {
   border-style: solid;
@@ -490,12 +490,12 @@ ul li {
 .sectionHead {
   border-bottom: 1px solid #D6D6D6;
   border-top: 1px solid #D6D6D6;
-  font-family: Courier, serif;
+  font-family: Courier, serif, serif;
   font-size: 50px;
   font-size: 5rem; }
 
 .contactIcons {
-  background-color: #33045E;
+  background-color: #6a0469;
   color: #D6D6D6;
   padding: 10px;
   padding: 1rem;
@@ -519,8 +519,8 @@ ul li {
       max-width: 70%; } }
 
 .finalMessage {
-  font-family: Lustria;
-  background-color: #648500;
+  font-family: Nunito, sans-serif, serif;
+  background-color: #b67723;
   color: #D6D6D6;
   padding: 10px;
   padding: 1rem;
@@ -535,12 +535,12 @@ ul li {
       text-align: left; } }
 
 .colorPop {
-  color: #648500;
+  color: #b67723;
   font-size: 20px;
   font-size: 2rem; }
 
 footer {
-  border-top: 1px solid #648500;
+  border-top: 1px solid #b67723;
   min-height: 10%;
   padding: 10px;
   padding: 1rem; }
