@@ -31,8 +31,8 @@ Navbar
   width: 100%;
   height: 60px;
   line-height: 60px;
-  background: $base-background;
-  color: $base-text-color;
+  background: $contrast-background;
+  color: $contrast-text-color;
   h1 {
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@ Navbar
       list-style-type: none;
       a {
         display: block;
-        color: $accent-text-color;
+        color: $base-text-color;
         text-decoration: none;
         padding: 0 10px;
       }
@@ -83,7 +83,7 @@ Navbar
       line-height: 40px;
     }
     ul {
-      background: $base-background;
+      background: $contrast-background;
       width: 100%;
       li {
         float: none;

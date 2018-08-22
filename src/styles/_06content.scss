@@ -71,6 +71,31 @@ h6 {
     @include font-size($body-font-size);
 }
 
+a {
+    color: $accent-background;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    li {
+        list-style-type: square;
+        list-style-position: inside;
+        color: $accent-background;
+        span {
+            color: $base-text-color;
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid $accent-background;
+    min-height: 10%;
+    @include rem-fallback(padding, 1);
+}
+
 .centered {
     margin: 0 auto;
     text-align: center;
@@ -174,13 +199,6 @@ h6 {
     overflow: hidden;
 }
 
-ul {
-    li {
-        list-style-type: square;
-        list-style-position: inside;
-    }
-}
-
 .skillList {
     text-align: left;
     padding-left: 20%;
@@ -248,12 +266,6 @@ ul {
 .colorPop {
     color: $accent-background;
     @include rem-fallback(font-size, 2);
-}
-
-footer {
-    border-top: 1px solid $accent-background;
-    min-height: 10%;
-    @include rem-fallback(padding, 1);
 }
 
 .content {

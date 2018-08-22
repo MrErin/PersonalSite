@@ -215,7 +215,7 @@ Navbar
   width: 100%;
   height: 60px;
   line-height: 60px;
-  background: #0D0D0D;
+  background: #3a1d3a;
   color: #D6D6D6; }
   #header h1 {
     position: absolute;
@@ -254,7 +254,7 @@ Navbar
       top: -50px;
       line-height: 40px; }
     #nav ul {
-      background: #0D0D0D;
+      background: #3a1d3a;
       width: 100%; }
       #nav ul li {
         float: none; }
@@ -365,6 +365,25 @@ h6 {
   font-size: 1.6rem;
   line-height: 2.4rem; }
 
+a {
+  color: #b67723;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+ul li {
+  list-style-type: square;
+  list-style-position: inside;
+  color: #b67723; }
+  ul li span {
+    color: #D6D6D6; }
+
+footer {
+  border-top: 1px solid #b67723;
+  min-height: 10%;
+  padding: 10px;
+  padding: 1rem; }
+
 .centered {
   margin: 0 auto;
   text-align: center; }
@@ -467,10 +486,6 @@ h6 {
   height: 1px;
   overflow: hidden; }
 
-ul li {
-  list-style-type: square;
-  list-style-position: inside; }
-
 .skillList {
   text-align: left;
   padding-left: 20%;
@@ -495,7 +510,7 @@ ul li {
   font-size: 5rem; }
 
 .contactIcons {
-  background-color: #6a0469;
+  background-color: #3a1d3a;
   color: #D6D6D6;
   padding: 10px;
   padding: 1rem;
@@ -538,12 +553,6 @@ ul li {
   color: #b67723;
   font-size: 20px;
   font-size: 2rem; }
-
-footer {
-  border-top: 1px solid #b67723;
-  min-height: 10%;
-  padding: 10px;
-  padding: 1rem; }
 
 #wrapper {
   height: 100%;
