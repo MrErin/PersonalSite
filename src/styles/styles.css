@@ -227,7 +227,10 @@ Navbar
   right: 0; }
   #nav ul li {
     float: left;
-    list-style-type: none; }
+    list-style-type: none;
+    font-family: Nunito, sans-serif, serif;
+    font-size: 20px;
+    font-size: 2rem; }
     #nav ul li a {
       display: block;
       color: #D6D6D6;
@@ -276,6 +279,12 @@ Navbar
     transform: translateY(0px);
     -moz-transform: translateY(0px);
     -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0); } }
+
+.navHeading {
+  font-size: 40px;
+  font-size: 4rem;
+  text-align: center;
+  font-family: Nunito, sans-serif, serif, serif; }
 
 /* 
 

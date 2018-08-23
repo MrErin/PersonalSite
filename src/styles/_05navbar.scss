@@ -47,6 +47,8 @@ Navbar
     li {
       float: left;
       list-style-type: none;
+      font-family: $title-font;
+      @include rem-fallback(font-size, 2.0);
       a {
         display: block;
         color: $base-text-color;
@@ -111,4 +113,10 @@ Navbar
     -moz-transform: translateY(0px);
     -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
   }
+}
+
+.navHeading {
+  @include rem-fallback(font-size, 4);
+  text-align: center;
+  font-family: $title-font, serif;
 }
