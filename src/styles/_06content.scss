@@ -230,12 +230,13 @@ footer {
 .contactIcons {
     i {
         display: inline;
-        @include rem-fallback(font-size, 5);
     }
     a:not(:first-child) {
         padding-left: 30px;
     }
     a {
+        @include rem-fallback(font-size, 5);
+        @include rem-fallback(padding, .5);
         text-decoration: none;
         color: $base-text-color;
     }
