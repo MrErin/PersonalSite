@@ -49,7 +49,6 @@ _codeLibrary
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-scratch.*
-scratch/
+scratchNotes/
 *venv/
 ozCodes.js

@@ -227,7 +227,10 @@ Navbar
   right: 0; }
   #nav ul li {
     float: left;
-    list-style-type: none; }
+    list-style-type: none;
+    font-family: Nunito, sans-serif, serif;
+    font-size: 20px;
+    font-size: 2rem; }
     #nav ul li a {
       display: block;
       color: #D6D6D6;
@@ -238,7 +241,7 @@ Navbar
   border-top: none;
   border-bottom: none; }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   #header .container {
     width: 100%; }
   #header h1 {
@@ -276,6 +279,12 @@ Navbar
     transform: translateY(0px);
     -moz-transform: translateY(0px);
     -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0); } }
+
+.navHeading {
+  font-size: 40px;
+  font-size: 4rem;
+  text-align: center;
+  font-family: Nunito, sans-serif, serif, serif; }
 
 /* 
 
@@ -374,7 +383,9 @@ a {
 ul li {
   list-style-type: square;
   list-style-position: inside;
-  color: #b67723; }
+  color: #b67723;
+  font-size: 20px;
+  font-size: 2rem; }
   ul li span {
     color: #D6D6D6; }
 
@@ -407,8 +418,8 @@ footer {
   width: 200px;
   height: 200px;
   border-radius: 100px;
-  border: 4px solid #fff; }
-  @media (max-width: 768px) {
+  border: 4px solid #b67723; }
+  @media (max-width: 750px) {
     .bioHeadshot {
       width: 100px;
       height: 100px; } }
@@ -419,6 +430,10 @@ footer {
   font-size: 4rem;
   text-align: center;
   font-family: Nunito, sans-serif, serif, serif; }
+  @media (max-width: 750px) {
+    .contentHeading {
+      line-height: 40px;
+      line-height: 4rem; } }
 
 .contentSubhead {
   margin-top: -5px;
@@ -433,25 +448,25 @@ footer {
   border-style: solid;
   border-color: #D6D6D6;
   width: 60%; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .divbar {
       width: 80%; } }
 
 .bioDesc {
   text-align: left;
   margin-top: 25px;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 20px;
+  font-size: 2rem;
   padding-bottom: 25px; }
-  @media (min-width: 768px) {
+  @media (min-width: 750px) {
     .bioDesc {
       margin-left: 10%; } }
 
 .desc {
   text-align: center;
   margin-top: 25px;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 20px;
+  font-size: 2rem;
   padding-bottom: 25px; }
 
 .techContainer {
@@ -495,7 +510,7 @@ footer {
   -webkit-column-gap: 20px;
   column-count: 2;
   column-gap: 20px; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .skillList {
       padding: 0;
       -moz-column-count: 1;
@@ -529,7 +544,7 @@ footer {
   .contactIcons a {
     text-decoration: none;
     color: #D6D6D6; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .contactIcons {
       max-width: 70%; } }
 
@@ -544,7 +559,7 @@ footer {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   max-width: 50%; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .finalMessage {
       max-width: 70%;
       text-align: left; } }
@@ -571,7 +586,7 @@ footer {
   position: fixed;
   max-width: 100%;
   height: auto; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .bulbImg {
       top: 61px; } }
 
