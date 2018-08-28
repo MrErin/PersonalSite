@@ -536,12 +536,15 @@ footer {
   border-top: 1px solid #D6D6D6;
   max-width: 50%; }
   .contactIcons i {
-    display: inline;
-    font-size: 50px;
-    font-size: 5rem; }
-  .contactIcons a:not(:first-child) {
-    padding-left: 30px; }
+    display: inline; }
+  @media (min-width: 751px) {
+    .contactIcons a:not(:first-child) {
+      padding-left: 30px; } }
   .contactIcons a {
+    font-size: 50px;
+    font-size: 5rem;
+    padding: 5px;
+    padding: 0.5rem;
     text-decoration: none;
     color: #D6D6D6; }
   @media (max-width: 750px) {

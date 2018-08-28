@@ -39,10 +39,19 @@ const backgroundChange = () => {
 	let oldAnchorId = 'HomeA'
 
 	$(window).on('resize scroll', function() {
-		let oldImg = $('#bulbDiv .changeThis')
+
+		// let oldImg = $('#bulbDiv .changeThis')
+
+		// cycle through all anchor elements
 		$('.anchor').each(function() {
+
+			// sets the current anchor tag
 			let activeAnchorId = $(this).attr('id')
+
+			// set the oldImg as the one currently being displayed
 			let oldImg = $('#bulbDiv .changeThis')
+
+			// get the id of the image that should be displayed when the active anchor is in the window
 			let newImg = $(document.getElementById(classPicker(activeAnchorId)))
 			if($(this).viewCheck()){
 				if ($(this).attr('id') !== oldAnchorId) {
