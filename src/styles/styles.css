@@ -537,8 +537,9 @@ footer {
   max-width: 50%; }
   .contactIcons i {
     display: inline; }
-  .contactIcons a:not(:first-child) {
-    padding-left: 30px; }
+  @media (min-width: 751px) {
+    .contactIcons a:not(:first-child) {
+      padding-left: 30px; } }
   .contactIcons a {
     font-size: 50px;
     font-size: 5rem;

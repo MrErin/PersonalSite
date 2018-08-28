@@ -231,8 +231,10 @@ footer {
     i {
         display: inline;
     }
-    a:not(:first-child) {
-        padding-left: 30px;
+    @include media (">tablet") {
+        a:not(:first-child) {
+            padding-left: 30px;
+        }
     }
     a {
         @include rem-fallback(font-size, 5);
