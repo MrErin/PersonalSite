@@ -137,6 +137,9 @@ footer {
     @include rem-fallback(font-size, 4);
     text-align: center;
     font-family: $title-font, serif;
+    @include media("<=tablet") {
+        @include rem-fallback(line-height, 4);
+    }
 }
 
 .contentSubhead {

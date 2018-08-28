@@ -241,7 +241,7 @@ Navbar
   border-top: none;
   border-bottom: none; }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   #header .container {
     width: 100%; }
   #header h1 {
@@ -419,7 +419,7 @@ footer {
   height: 200px;
   border-radius: 100px;
   border: 4px solid #b67723; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .bioHeadshot {
       width: 100px;
       height: 100px; } }
@@ -430,6 +430,10 @@ footer {
   font-size: 4rem;
   text-align: center;
   font-family: Nunito, sans-serif, serif, serif; }
+  @media (max-width: 750px) {
+    .contentHeading {
+      line-height: 40px;
+      line-height: 4rem; } }
 
 .contentSubhead {
   margin-top: -5px;
@@ -444,7 +448,7 @@ footer {
   border-style: solid;
   border-color: #D6D6D6;
   width: 60%; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .divbar {
       width: 80%; } }
 
@@ -454,7 +458,7 @@ footer {
   font-size: 20px;
   font-size: 2rem;
   padding-bottom: 25px; }
-  @media (min-width: 768px) {
+  @media (min-width: 750px) {
     .bioDesc {
       margin-left: 10%; } }
 
@@ -506,7 +510,7 @@ footer {
   -webkit-column-gap: 20px;
   column-count: 2;
   column-gap: 20px; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .skillList {
       padding: 0;
       -moz-column-count: 1;
@@ -540,7 +544,7 @@ footer {
   .contactIcons a {
     text-decoration: none;
     color: #D6D6D6; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .contactIcons {
       max-width: 70%; } }
 
@@ -555,7 +559,7 @@ footer {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   max-width: 50%; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .finalMessage {
       max-width: 70%;
       text-align: left; } }
@@ -582,7 +586,7 @@ footer {
   position: fixed;
   max-width: 100%;
   height: auto; }
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     .bulbImg {
       top: 61px; } }
 
