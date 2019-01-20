@@ -7,12 +7,10 @@ This is a redesign (or recode with the same design) of my [personal site](http:/
 - Keep the design as close as possible to the original (colors, typography, light bulb should be basically the same)
 - Use React to display projects & work history
 - Use Material Design for styling
-- Use Redux for state management even though it's WAY overkill
 
 ## Learning Goals:
 
 - Solidify understanding of React
-- Solidify understanding of Redux
 - Learn how to copy an existing design in Material UI
 - Solidify understanding of TypeScript
 

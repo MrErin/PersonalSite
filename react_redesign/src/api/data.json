@@ -1,0 +1,316 @@
+{
+  "Bio": [
+    "Ideas are the best thing ever.",
+    "Even if an idea is wild, or it doesn't pan out, or it mutates while I'm pondering it so I find myself on a completely different track at the end of the day, I freaking love ideas.",
+    "The optimizer in me loves refining and improving existing ideas. The innovator in me lives to create new ideas or find new uses for existing ideas.",
+    "It's why I became a software developer. The process of making something better or creating something new, of playing with and implementing ideas...",
+    "It just lights me up.",
+    "Let's talk ideas, and let's build something cool together."
+  ],
+  "Projects": [
+    {
+      "name": "TinyNSS",
+      "imgSrc": "",
+      "deployedLink": "http://tinynss.erinmeaker.com",
+      "gitHubLink": "https://github.com/MrErin/TinyNSS",
+      "description": "Tiny NSS is an HTML/JavaScript game that simulates the experience of being a student at Nashville Software School. The player must care for their virtual NSS student's needs (hunger, social, and fun) as well as keeping the student's confidence in the \"sweet spot\" between timid and delusional so the student is in a good mindset to learn code. The player completes code blocks of increasing complexity ranging from declaring JavaScript variables all the way to creating React.js components."
+    },
+    {
+      "name": "BookGuise",
+      "imgSrc": "",
+      "deployedLink": "",
+      "gitHubLink": "https://github.com/MrErin/backEndCapstone",
+      "description": "BookGuise is a data-heavy book suggestion app that accepts the title of the user’s favorite book and returns a list of similar books without revealing the covers, titles, or authors, instead displaying a mysterious description of the similar book. The app is built in Python and merges user-generated data from the Goodreads and LibraryThing book APIs."
+    },
+    {
+      "name": "CodeWars Solutions",
+      "imgSrc": "",
+      "deployedLink": "https://www.codewars.com/users/MrErin",
+      "gitHubLink": "https://github.com/MrErin/CodeWars",
+      "description": "CodeWars is a pretty cool site that offers small coding challenges in a ton of different languages. I've enjoyed trying my hand at the challenges and learning new ways to solve problems, primarily in JavaScript at the moment."
+    },
+    {
+      "name": "Advent of Code - 2018",
+      "imgSrc": "",
+      "deployedLink": "",
+      "gitHubLink": "https://github.com/MrErin/adventOfCode",
+      "description": "I didn't even come close to finishing this on time this year, but I do intend to keep working on it during 2019. I solved what I could using Python and had a blast with the challenges. Hopefully the site will stay up year-round."
+    }
+  ],
+  "Skills": [
+    {
+      "name": "Python",
+      "category": "Language",
+      "level": 2,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Django",
+      "category": "Framework",
+      "level": 1,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "JavaScript",
+      "category": "Language",
+      "level": 5,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "React",
+      "category": "Framework",
+      "level": 4,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Redux",
+      "category": "Framework",
+      "level": 2,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "TypeScript",
+      "category": "Language",
+      "level": 1,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "CSS",
+      "category": "Language",
+      "level": 3,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "HTML5",
+      "category": "Language",
+      "level": 6,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Git",
+      "category": "Utility",
+      "level": 5,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Not Being An Asshole",
+      "category": "Soft Skill",
+      "level": 14,
+      "iconSrc": "",
+      "description": "Diplomatic? Yes. Doormat? Hell no."
+    },
+    {
+      "name": "Creativity",
+      "category": "Soft Skill",
+      "level": 20,
+      "iconSrc": "",
+      "description": "I love making unexpected and awesome things."
+    },
+    {
+      "name": "Bootstrap",
+      "category": "Framework",
+      "level": 3,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Written & Verbal Communication",
+      "category": "Soft Skill",
+      "level": 17,
+      "iconSrc": "",
+      "description": "Nothing else to say about it. Because I omit needless words. Always."
+    },
+    {
+      "name": "Growth Mindset",
+      "category": "Soft Skill",
+      "level": 12,
+      "iconSrc": "",
+      "description": "I'm a recovering perfectionist, seeking opportunities to maximize my learning by embracing failure."
+    },
+    {
+      "name": "GitHub",
+      "category": "Utility",
+      "level": 5,
+      "iconSrc": "",
+      "description": "I love optimizing my repos by including templates and utilizing the project management features of the site."
+    },
+    {
+      "name": "Azure DevOps",
+      "category": "Utility",
+      "level": 3,
+      "iconSrc": "",
+      "description": "Always a sucker for a wicked cool project management system."
+    },
+    {
+      "name": "Grunt",
+      "category": "Utility",
+      "level": 7,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Sass",
+      "category": "Framework",
+      "level": 7,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "WordPress",
+      "category": "Utility",
+      "level": 5,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Drupal",
+      "category": "Utility",
+      "level": 5,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "SQL",
+      "category": "Language",
+      "level": 7,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "RESTful API",
+      "category": "Framework",
+      "level": 5,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Data Analysis",
+      "category": "Experience",
+      "level": 14,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Scrum Methodology",
+      "category": "Soft Skill",
+      "level": 9,
+      "iconSrc": "",
+      "description": "Scrum Master Certified"
+    },
+    {
+      "name": "Test Driven Development",
+      "category": "Tehcnical Experience",
+      "level": 3,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Agile Software Development Practices",
+      "category": "Experience",
+      "level": 8,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Research",
+      "category": "Experience",
+      "level": 16,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Business Requirement Analysis & Design",
+      "category": "Experience",
+      "level": 12,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Documentation",
+      "category": "Experience",
+      "level": 18,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Technical Writing & Editing",
+      "category": "Soft Skill",
+      "level": 16,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Graphic Design",
+      "category": "Design",
+      "level": 6,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Digital Photography",
+      "category": "Design",
+      "level": 18,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Solving Problems",
+      "category": "Soft Skills",
+      "level": 18,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Process Optimization",
+      "category": "Experience",
+      "level": 14,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Digital Ocean",
+      "category": "Experience",
+      "level": 2,
+      "iconSrc": "",
+      "description": ""
+    },
+    {
+      "name": "Command Line",
+      "category": "Language",
+      "level": 3,
+      "iconSrc": "",
+      "description": ""
+    }
+  ],
+  "Contact": [
+    {
+      "linkName": "GitHub",
+      "href": "https://www.github.com/MrErin",
+      "iconSrc": ""
+    },
+    {
+      "linkName": "LinkedIn",
+      "href": "https://www.linkedin.com/in/erin-meaker",
+      "iconSrc": ""
+    },
+    {
+      "linkName": "Email",
+      "href": "mailto:erinmeaker@gmail.com",
+      "iconSrc": ""
+    },
+    {
+      "linkName": "Website",
+      "href": "https://www.erinmeaker.com",
+      "iconSrc": ""
+    }
+  ]
+}
